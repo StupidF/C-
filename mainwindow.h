@@ -32,6 +32,8 @@ private slots:
     void  readMyCom();
     void on_BTN_ComOpen_clicked();
     void on_BTN_ComClose_clicked();
+    void on_pushButton_clicked();
+    void on_pushclear_clicked();
     void on_BTN_Send_clicked();
 };
 

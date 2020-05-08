@@ -17,48 +17,28 @@
    <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>240</x>
       <y>20</y>
-      <width>256</width>
-      <height>192</height>
+      <width>91</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="tabStopWidth">
+     <number>85</number>
     </property>
    </widget>
    <widget class="QGroupBox" name="gCOMSET">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>20</y>
-      <width>241</width>
-      <height>341</height>
+      <x>0</x>
+      <y>10</y>
+      <width>111</width>
+      <height>151</height>
      </rect>
     </property>
     <property name="title">
-     <string>串口设置</string>
+     <string>连接设置</string>
     </property>
-    <widget class="QPushButton" name="BTN_ComOpen">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>130</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>打开串口</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="CB_COM_num">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>87</width>
-       <height>22</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
@@ -72,80 +52,180 @@
       <string>串口号</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="BTN_ComClose">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>170</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>关闭串口</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="COB_ComBaudRate">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>130</y>
-       <width>87</width>
-       <height>22</height>
+       <y>60</y>
+       <width>77</width>
+       <height>80</height>
       </rect>
      </property>
-     <item>
-      <property name="text">
-       <string>115200</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>9600</string>
-      </property>
-     </item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QComboBox" name="CB_COM_num"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="BTN_ComOpen">
+        <property name="text">
+         <string>连接</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="BTN_ComClose">
+        <property name="text">
+         <string>断开</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>100</y>
-       <width>72</width>
-       <height>15</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>波特率</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QLineEdit" name="sendMsgLineEdit">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>240</y>
-      <width>261</width>
-      <height>51</height>
-     </rect>
-    </property>
    </widget>
    <widget class="QPushButton" name="BTN_Send">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>310</y>
+      <x>60</x>
+      <y>180</y>
       <width>93</width>
       <height>28</height>
      </rect>
     </property>
     <property name="text">
-     <string>发送</string>
+     <string>历史查询</string>
     </property>
    </widget>
-   <zorder>textBrowser</zorder>
-   <zorder>sendMsgLineEdit</zorder>
-   <zorder>gCOMSET</zorder>
-   <zorder>BTN_Send</zorder>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>30</y>
+      <width>72</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>当前速度：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>30</y>
+      <width>72</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>报警速度：</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>20</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="text_time">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>220</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushclear">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>180</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>清空显示</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>190</y>
+      <width>72</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>当前时间：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>80</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>设定报警速度</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_3">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>70</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="tabStopWidth">
+     <number>85</number>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_4">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>70</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>80</y>
+      <width>72</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>上次报警时速度：</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="text_r">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>220</y>
+      <width>256</width>
+      <height>161</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -153,7 +233,7 @@
      <x>0</x>
      <y>0</y>
      <width>626</width>
-     <height>26</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
